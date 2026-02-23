@@ -1,0 +1,29 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Logs / runtime output
+*.log
+
+# PHP dependencies (root-level only, keep bundled third-party vendors in app/ThirdParty)
+/vendor/
+
+# Node
+/node_modules/
+
+# Build/cache/temp (RISE / CodeIgniter-style runtime folders)
+/writable/
+/files/temp/
+
+# User-uploaded content (usually should not be versioned)
+/files/general/
+/files/profile_images/
+/files/project_files/
+/files/timeline_files/
