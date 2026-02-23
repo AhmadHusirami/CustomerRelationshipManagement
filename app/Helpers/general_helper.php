@@ -214,12 +214,12 @@ if (!function_exists('get_actual_controller_name')) {
 if (!function_exists('get_setting')) {
 
     function get_setting($key = "") {
-        $setting_value = get_array_value(config('Rise')->app_settings_array, $key);
+        $setting_value = get_array_value(config('Nexacore')->app_settings_array, $key);
         if ($setting_value !== NULL) {
             return $setting_value;
         } else {
-            if (isset(config('Rise')->$key)) {
-                return config('Rise')->$key;
+            if (isset(config('Nexacore')->$key)) {
+                return config('Nexacore')->$key;
             } else if (isset(config('App')->$key)) {
                 return config('App')->$key;
             } else {
@@ -1625,7 +1625,7 @@ if (!function_exists('send_message_via_pusher')) {
                 "message" => $message_data
             );
 
-            if ($pusher_connect->trigger_channel_event('user_' . $to_user_id . '_message_id_' . $message_id . '_channel', 'rise-chat-event', $data)) {
+            if ($pusher_connect->trigger_channel_event('user_' . $to_user_id . '_message_id_' . $message_id . '_channel', 'nexacore-chat-event', $data)) {
                 return true;
             }
         } else {
@@ -1647,7 +1647,7 @@ if (!function_exists('send_message_via_pusher')) {
                         </div>"
             );
 
-            if ($pusher_connect->trigger_channel_event('user_' . $to_user_id . '_message_id_' . $message_id . '_channel', 'rise-chat-typing-event', $message_data)) {
+            if ($pusher_connect->trigger_channel_event('user_' . $to_user_id . '_message_id_' . $message_id . '_channel', 'nexacore-chat-typing-event', $message_data)) {
                 return true;
             }
         }

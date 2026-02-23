@@ -248,7 +248,7 @@ class Left_menu {
                         "ticket_types/index",
                         "lead_status/index",
                         "pages/index",
-                        "rise_plugins/index"
+                        "nexacore_plugins/index"
                     )
                 );
             }

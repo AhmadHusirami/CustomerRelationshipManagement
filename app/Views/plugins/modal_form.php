@@ -1,10 +1,10 @@
-<?php echo form_open(get_uri("rise_plugins/save"), array("id" => "plugin-form", "class" => "general-form", "role" => "form")); ?>
+<?php echo form_open(get_uri("nexacore_plugins/save"), array("id" => "plugin-form", "class" => "general-form", "role" => "form")); ?>
 <div class="modal-body clearfix">
     <div class="container-fluid">
         <?php
         echo view("includes/multi_file_uploader", array(
-            "upload_url" => get_uri("rise_plugins/upload_file"),
-            "validation_url" => get_uri("rise_plugins/validate_plugin_file"),
+            "upload_url" => get_uri("nexacore_plugins/upload_file"),
+            "validation_url" => get_uri("nexacore_plugins/validate_plugin_file"),
             "max_files" => 1,
             "description_placeholder" => "Envato Purchase Code"
         ));
@@ -16,7 +16,7 @@
 
 <div class="modal-footer">
     <button type="button" class="btn btn-default cancel-upload" data-bs-dismiss="modal"><span data-feather="x" class="icon-16"></span> <?php echo app_lang('close'); ?></button>
-    <button type="submit" disabled="disabled" class="btn btn-primary start-upload"><span data-feather="download" class="icon-16"></span> <?php echo app_lang('install'); ?></button>
+    <button type="submit" disabled="disabled" class="btn btn-primary start-upload"><span data-feather="download" class="icon-16"></span> Upload Plugin</button>
 </div>
 <?php echo form_close(); ?>
 

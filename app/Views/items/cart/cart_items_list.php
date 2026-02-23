@@ -1,5 +1,5 @@
 <?php if ($items) { ?>
-    <div class="rise-cart-body">
+    <div class="nexacore-cart-body">
         <?php
         foreach ($items as $item) {
             ?>

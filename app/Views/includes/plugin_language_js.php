@@ -1,8 +1,8 @@
 <?php
 
-$validation_err = "License error. " . app_lang('something_went_wrong');
+$validation_err = "Validation error. " . app_lang('something_went_wrong');
 if (isset($login_user->is_admin) && $login_user->is_admin) {
-    $validation_err = "You don't have any active license for this site. Please check the Settings > Updates page for more details.";
+    $validation_err = app_lang('something_went_wrong');
 }
 
 ?>

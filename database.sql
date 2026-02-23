@@ -1343,7 +1343,7 @@ CREATE TABLE IF NOT EXISTS `settings` (
 
 INSERT INTO `settings` (`setting_name`, `setting_value`, `type`, `deleted`) VALUES ('accepted_file_formats', 'jpg,jpeg,png,doc,xlsx,txt,pdf,zip,webm', 'app', '0'),
 ('allowed_ip_addresses', '', 'app', '0'),
-('app_title', 'RISE - Ultimate Project Manager and CRM', 'app', '0'),
+('app_title', 'Nexacore Co. - Ultimate Project Manager and CRM', 'app', '0'),
 ('app_verification_key', 'APP-VERIFICATION-KEY', 'app', '0'),
 ('contract_color', '#000000', 'app', '0'),
 ('currency_symbol', '$', 'app', '0'),
@@ -1729,4 +1729,3 @@ CREATE TABLE IF NOT EXISTS `verification` (
   `deleted` int NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
-

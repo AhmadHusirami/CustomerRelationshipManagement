@@ -20,25 +20,6 @@ if (version_compare(PHP_VERSION, $minPhpVersion, '<')) {
     exit(1);
 }
 
-
-//set the variable to 'installed' after installation
-$app_state = "pre_installation";
-
-// we don't want to access the main project before installation. redirect to installation page
-if ($app_state === 'pre_installation') {
-    $domain = $_SERVER['HTTP_HOST'] . $_SERVER['SCRIPT_NAME'];
-
-    $domain = preg_replace('/index.php.*/', '', $domain); //remove everything after index.php
-    if (!empty($_SERVER['HTTPS'])) {
-        $domain = 'https://' . $domain;
-    } else {
-        $domain = 'http://' . $domain;
-    }
-
-    header("Location: $domain./install/index.php");
-    exit;
-}
-
 /*
  *---------------------------------------------------------------
  * SET THE CURRENT DIRECTORY

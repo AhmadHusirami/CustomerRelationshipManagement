@@ -1,7 +1,3 @@
-<?php
-echo view("dashboards/install_pwa");
-?>
-
 <div id="page-content" class="page-wrapper clearfix dashboard-view">
 
     <?php

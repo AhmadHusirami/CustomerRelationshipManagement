@@ -1,4 +1,4 @@
-<?php echo form_open(get_uri("rise_plugins/save_status_of_plugin/$plugin/installed/1"), array("id" => "plugin-form", "class" => "general-form", "role" => "form")); ?>
+<?php echo form_open(get_uri("nexacore_plugins/save_status_of_plugin/$plugin/installed/1"), array("id" => "plugin-form", "class" => "general-form", "role" => "form")); ?>
 <div class="modal-body clearfix">
     <div class="container-fluid">
         <div class=" form-group">
@@ -23,7 +23,7 @@
 
 <div class="modal-footer">
     <button type="button" class="btn btn-default cancel-upload" data-bs-dismiss="modal"><span data-feather="x" class="icon-16"></span> <?php echo app_lang('close'); ?></button>
-    <button type="submit"  class="btn btn-primary start-upload"><span data-feather="download" class="icon-16"></span> <?php echo app_lang('install'); ?></button>
+    <button type="submit"  class="btn btn-primary start-upload"><span data-feather="download" class="icon-16"></span> Apply</button>
 </div>
 <?php echo form_close(); ?>
 
@@ -38,4 +38,4 @@
         });
     });
 
-</script>    
+</script>

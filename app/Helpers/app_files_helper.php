@@ -863,8 +863,12 @@ if (!function_exists('get_language_list')) {
             return $supported_locales;
         } else {
             $language_dropdown = array();
+            $language_labels = array(
+                "english" => "English",
+                "arabic" => "العربية"
+            );
             foreach (get_setting("supportedLocales") as $language) {
-                $language_dropdown[$language] = ucfirst($language);
+                $language_dropdown[$language] = get_array_value($language_labels, strtolower($language)) ?: ucfirst($language);
             }
             return $language_dropdown;
         }

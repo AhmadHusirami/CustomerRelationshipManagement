@@ -79,19 +79,19 @@
                                     $user_language = $login_user->language;
                                     $system_language = get_setting("language");
 
-                                    foreach (get_language_list() as $language) {
+                                    foreach (get_language_list() as $language_code => $language_label) {
                                         $language_status = "";
-                                        $language_text = $language;
+                                        $language_text = $language_label;
 
-                                        if ($user_language == strtolower($language) || (!$user_language && $system_language == strtolower($language))) {
+                                        if ($user_language == strtolower($language_code) || (!$user_language && $system_language == strtolower($language_code))) {
                                             $language_status = "<span class='float-end checkbox-checked m0'></span>";
-                                            $language_text = "<strong>" . $language . "</strong>";
+                                            $language_text = "<strong>" . $language_label . "</strong>";
                                         }
 
                                         if ($login_user->user_type == "staff") {
-                                            echo ajax_anchor(get_uri("team_members/save_personal_language/$language"), $language_text . $language_status, array("class" => "dropdown-item clearfix", "data-reload-on-success" => "1"));
+                                            echo ajax_anchor(get_uri("team_members/save_personal_language/$language_code"), $language_text . $language_status, array("class" => "dropdown-item clearfix", "data-reload-on-success" => "1"));
                                         } else {
-                                            echo ajax_anchor(get_uri("clients/save_personal_language/$language"), $language_text . $language_status, array("class" => "dropdown-item clearfix", "data-reload-on-success" => "1"));
+                                            echo ajax_anchor(get_uri("clients/save_personal_language/$language_code"), $language_text . $language_status, array("class" => "dropdown-item clearfix", "data-reload-on-success" => "1"));
                                         }
                                     }
                                     ?>

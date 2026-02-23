@@ -6,11 +6,11 @@ namespace Config;
 
 use CodeIgniter\Config\BaseConfig;
 
-class Rise extends BaseConfig {
+class Nexacore extends BaseConfig {
 
     public $app_settings_array = array(
         "app_version" => "3.9.5",
-        "app_update_url" => 'https://releases.fairsketch.com/rise/',
+        "app_update_url" => 'https://releases.fairsketch.com/nexacore/',
         "updates_path" => './updates/',
     );
     public $app_csrf_exclude_uris = array(

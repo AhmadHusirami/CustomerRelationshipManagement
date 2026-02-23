@@ -15,8 +15,8 @@ function appAjaxRequest(options) {
 }
 
 const IDBHelper = (() => {
-    const DB_NAME = 'RISE_indexedDB';
-    const STORE_NAME = 'rise_store';
+    const DB_NAME = 'NEXACORE_indexedDB';
+    const STORE_NAME = 'nexacore_store';
     const DB_VERSION = 1;
 
     function isSupported() {
